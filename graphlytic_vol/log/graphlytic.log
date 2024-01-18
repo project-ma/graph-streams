@@ -1,0 +1,162 @@
+24.01.18 08:52:10.997  WARN [main] o.f.c.i.s.DefaultSqlScriptExecutor:41 - DB: no data (SQL State: 02000 - Error Code: -1100)
+24.01.18 08:52:11.001  WARN [main] o.f.c.i.s.DefaultSqlScriptExecutor:41 - DB: no data (SQL State: 02000 - Error Code: -1100)
+24.01.18 08:52:11.234  WARN [main] o.f.c.i.s.DefaultSqlScriptExecutor:41 - DB: no data (SQL State: 02000 - Error Code: -1100)
+24.01.18 08:52:11.268  WARN [main] o.f.c.i.s.DefaultSqlScriptExecutor:41 - DB: no data (SQL State: 02000 - Error Code: -1100)
+24.01.18 08:52:11.613  INFO [main] s.d.g.ApplicationSettings:170 - ----------------------------- APP VERSION ----------------------------
+24.01.18 08:52:11.614  INFO [main] s.d.g.ApplicationSettings:171 - |                        version: 4.2.3                              |
+24.01.18 08:52:11.615  INFO [main] s.d.g.ApplicationSettings:172 - |                gl.distribution: DOCKER                             |
+24.01.18 08:52:11.615  INFO [main] s.d.g.ApplicationSettings:173 - ----------------------------- SETTINGS -------------------------------
+24.01.18 08:52:11.615  INFO [main] s.d.g.ApplicationSettings:174 - |             graphlytic homeDir: /usr/share/graphlytic              |
+24.01.18 08:52:11.616  INFO [main] s.d.g.ApplicationSettings:175 - |                   main.dataDir: ../volume/data/                    |
+24.01.18 08:52:11.616  INFO [main] s.d.g.ApplicationSettings:176 - |                main.licenseDir:                                    |
+24.01.18 08:52:11.616  INFO [main] s.d.g.ApplicationSettings:177 - |                    main.logDir: ../volume/log/                     |
+24.01.18 08:52:11.616  INFO [main] s.d.g.ApplicationSettings:178 - |                main.widgetsDir: ../volume/widgets/                 |
+24.01.18 08:52:11.616  INFO [main] s.d.g.ApplicationSettings:179 - |                  main.iconsDir: ../volume/icons/                   |
+24.01.18 08:52:11.616  INFO [main] s.d.g.ApplicationSettings:180 - |                 main.emailsDir:                                    |
+24.01.18 08:52:11.617  INFO [main] s.d.g.ApplicationSettings:181 - |           neo4j.connector.bolt: bolt://localhost:7687              |
+24.01.18 08:52:11.617  INFO [main] s.d.g.ApplicationSettings:182 - |                    hsql.schema: GRAPHLYTIC                         |
+24.01.18 08:52:11.617  INFO [main] s.d.g.ApplicationSettings:183 - |                send.exceptions: false                              |
+24.01.18 08:52:11.617  INFO [main] s.d.g.ApplicationSettings:184 - |     graphlytic.database.backup: true                               |
+24.01.18 08:52:11.617  INFO [main] s.d.g.ApplicationSettings:185 - |  graphlytic.database.backupDir: ../volume/data//backups            |
+24.01.18 08:52:11.617  INFO [main] s.d.g.ApplicationSettings:190 - ----------------------------- BRANDING -------------------------------
+24.01.18 08:52:11.618  INFO [main] s.d.g.ApplicationSettings:191 - |                          title: Graphlytic                         |
+24.01.18 08:52:11.618  INFO [main] s.d.g.ApplicationSettings:192 - |                          image:                                    |
+24.01.18 08:52:11.618  INFO [main] s.d.g.ApplicationSettings:193 - |                     background:                                    |
+24.01.18 08:52:11.618  INFO [main] s.d.g.ApplicationSettings:196 - ----------------------------- ADDITIONAL INFO ------------------------
+24.01.18 08:52:11.618  INFO [main] s.d.g.ApplicationSettings:197 - |                   java.version: 11.0.19                            |
+24.01.18 08:52:11.618  INFO [main] s.d.g.ApplicationSettings:198 - |                      java.home: /usr/lib/jvm/zulu11-ca-amd64       |
+24.01.18 08:52:11.618  INFO [main] s.d.g.ApplicationSettings:199 - |                            env: prod                               |
+24.01.18 08:52:11.619  INFO [main] s.d.g.ApplicationSettings:200 - |                  defaultLocale: en_US                              |
+24.01.18 08:52:11.619  INFO [main] s.d.g.ApplicationSettings:201 - |               supportedLocales: [sk_SK, en_US]                     |
+24.01.18 08:52:11.619  INFO [main] s.d.g.ApplicationSettings:202 - ----------------------------------------------------------------------
+24.01.18 08:52:11.919  INFO [main] s.d.g.u.InitializingBean:26 - --- INITIALIZATION START ---
+24.01.18 08:52:13.118  INFO [main] s.d.g.u.InitializingBean:32 - --- INITIALIZATION END ---
+24.01.18 08:52:14.512  WARN [main] o.s.w.c.s.SpringBeanAutowiringSupport:89 - Current WebApplicationContext is not available for processing of QuartzConfiguration: Make sure this class gets constructed in a Spring web application after the Spring WebApplicationContext has been initialized. Proceeding without injection.
+24.01.18 08:53:22.634  INFO [qtp1726780304-61] AUDIT_LOGGER:72 - AUDIT LOGIN_SUCCESS user:'admin'
+24.01.18 08:53:22.787 ERROR [qtp1726780304-61] s.d.g.c.GraphConnectionClient:93 - Error in place:
+org.neo4j.driver.exceptions.ServiceUnavailableException: Unable to connect to localhost:7687, ensure the database is running and that there is a working network connection to it.
+	at org.neo4j.driver.internal.util.Futures.blockingGet(Futures.java:143)
+	at org.neo4j.driver.internal.util.Futures.blockingGet(Futures.java:113)
+	at org.neo4j.driver.internal.InternalDriver.verifyConnectivity(InternalDriver.java:159)
+	at sk.demtec.gl.connection.AbstractNeo4JGraphConnectionDriver.verifyConnectivity(AbstractNeo4JGraphConnectionDriver.java:315)
+	at sk.demtec.gl.connection.GraphConnectionClient.checkConnection(GraphConnectionClient.java:88)
+	at sk.demtec.gl.webapp.GraphlyticSimpleUrlAuthenticationSuccessHandler.onAuthenticationSuccess(GraphlyticSimpleUrlAuthenticationSuccessHandler.java:66)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.successfulAuthentication(AbstractAuthenticationProcessingFilter.java:329)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:237)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:217)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at sk.demtec.gl.webapp.AutoRedirectToSsoFilter.doFilter(AutoRedirectToSsoFilter.java:47)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:223)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:217)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.saml2.provider.service.web.Saml2MetadataFilter.doFilterInternal(Saml2MetadataFilter.java:86)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.saml2.provider.service.servlet.filter.Saml2WebSsoAuthenticationRequestFilter.doFilterInternal(Saml2WebSsoAuthenticationRequestFilter.java:192)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at sk.demtec.gl.webapp.CorsDomainRefererFilter.doFilterInternal(CorsDomainRefererFilter.java:34)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at sk.demtec.gl.webapp.CorsHeaderWriterFilter.doHeadersAfter(CorsHeaderWriterFilter.java:61)
+	at sk.demtec.gl.webapp.CorsHeaderWriterFilter.doFilterInternal(CorsHeaderWriterFilter.java:53)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:193)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1626)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:193)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1626)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.eclipse.jetty.servlet.FilterHolder.doFilter(FilterHolder.java:193)
+	at org.eclipse.jetty.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1626)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:552)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:600)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1624)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1440)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:505)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1594)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1355)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:772)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:516)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:487)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:732)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:479)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:277)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+	at org.eclipse.jetty.io.ChannelEndPoint$1.run(ChannelEndPoint.java:104)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:338)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:315)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:173)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:131)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:409)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:883)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1034)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+	Suppressed: org.neo4j.driver.internal.util.ErrorUtil$InternalExceptionCause: null
+		at org.neo4j.driver.internal.async.connection.ChannelConnectedListener.databaseUnavailableError(ChannelConnectedListener.java:76)
+		at org.neo4j.driver.internal.async.connection.ChannelConnectedListener.operationComplete(ChannelConnectedListener.java:70)
+		at org.neo4j.driver.internal.async.connection.ChannelConnectedListener.operationComplete(ChannelConnectedListener.java:37)
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:578)
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:571)
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:550)
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:491)
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:616)
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:609)
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:117)
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.fulfillConnectPromise(AbstractNioChannel.java:321)
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:337)
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:707)
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+		at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+		at org.neo4j.driver.internal.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+		at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+		... 1 common frames omitted
+Caused by: org.neo4j.driver.internal.shaded.io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: localhost/127.0.0.1:7687
+Caused by: java.net.ConnectException: Connection refused
+	at java.base/sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:777)
+	at org.neo4j.driver.internal.shaded.io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330)
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:707)
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at org.neo4j.driver.internal.shaded.io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:986)
+	at org.neo4j.driver.internal.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at org.neo4j.driver.internal.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:829)
